@@ -1,10 +1,12 @@
- node('nodejs') {
+node('nodejs') {
 stage('Checkout') {
 git branch: 'main',
-url: 'https://github.com/do400-pipelines-control'
+url: 'https://github.com/saneekmv/do400-pipelines-control'
 }
 stage('Backend Tests') {
-sh 'node ./backend/test.js
-stage('Frontend Tests') {sh 'node ./frontend/test.js'
+sh 'node ./backend/test.js'
+}
+stage('Frontend Tests') {
+sh 'node ./frontend/test.js'
 }
 }
